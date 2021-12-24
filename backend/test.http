@@ -1,0 +1,17 @@
+http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+
+###
+http://127.0.0.1:5000/getrooms
+
+
+###
+http://127.0.0.1:5000/addclient?fio=BykanovNS1&phone_number=43212
+
+
+###
+http://127.0.0.1:5000/addvisit?client_id=2&room_id=201&start_date=3.12.2021&end_date=6.12.2021&paid=5000
+
+
+###
+http://127.0.0.1:5000/get_accomodation_info?room_id=101&date=7.11.2021
