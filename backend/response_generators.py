@@ -23,7 +23,7 @@ def get_fill_range(start, end):
 def get_monthly_rooms_status(year, month):
     query = get_taken_rooms_query(year, month)
     df = pd.read_sql(query, get_db())
-
+    print(df)
     rooms = []
     for room in df['room_name'].unique():
         rooms.append(room)
@@ -96,6 +96,8 @@ def get_accomodation_report(
     print(query)
 
     df = pd.read_sql(query, get_db())
+    if len(df) == 0:
+        return jsonify({"result": "Нет информации"})
     report = f"""
     Комната: {str(df.iloc[0]['roomname'])}
     Клиент: {str(df.iloc[0]['client_fio'])}
