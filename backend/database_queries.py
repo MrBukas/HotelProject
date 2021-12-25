@@ -13,7 +13,6 @@ join rooms r on r.room_id = a.room_id
 where start_date > '{y}-{m}-1' and leave_date < '{y}-{m}-31'
 order by a.room_id, start_date
     """
-    print(query)
     return query
 
 
