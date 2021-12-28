@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerMonth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: azure;
+    //margin-left: 1500px;
+}
+
+.headerDay {
+    //display: flex;
+    color: azure;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+
+}
+
+.month {
+    width: 30%;
+    padding-left: 20px;
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+}
+
+.day {
+    width: 4%;
+    background: darkslateblue;
+    border: darkseagreen 1px solid;
+}
+
+.elem {
+
+    display: flex;
+    background: darkslateblue;
+    width: 4%;
+}
