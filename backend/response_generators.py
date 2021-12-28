@@ -1,7 +1,8 @@
 import pandas as pd
 from flask import jsonify
 
-from backend.database_queries import get_taken_rooms_query, get_all_rooms, add_client, add_visit, get_accomodation_query
+from backend.database_queries import get_taken_rooms_query, get_all_rooms, add_client, add_visit, \
+    get_accomodation_query, add_room, get_administrator_query
 from backend.db_utils import get_db
 
 
@@ -90,6 +91,34 @@ def add_new_visit(
     cur.close()
     con.commit()
 
+def add_new_room(
+        room_id,
+        room_name,
+        person_count,
+        price,
+        floor):
+    query = add_room(
+        room_id,
+        room_name,
+        person_count,
+        price,
+        floor
+    )
+    con = get_db()
+    cur = con.cursor()
+    cur.execute(query)
+    cur.close()
+    con.commit()
+
+
+def add_new_admin(name):
+    query = get_administrator_query(name)
+    con = get_db()
+    cur = con.cursor()
+    cur.execute(query)
+    cur.close()
+    con.commit()
+
 
 def get_accomodation_report(
         room_id,
@@ -101,6 +130,8 @@ def get_accomodation_report(
 
     df = pd.read_sql(query, get_db())
     if len(df) == 0:
+        if demo:
+            return "Нет размещения на выбранную дату"
         return jsonify({"result": "Нет информации"})
     report = f"""
     Комната: {str(df.iloc[0]['roomname'])}
@@ -108,6 +139,7 @@ def get_accomodation_report(
     Номер телефона: {str(df.iloc[0]['number'])}
     Дата заселения: {str(df.iloc[0]['start'])}
     Дата выезда: {str(df.iloc[0]['end'])}
+    Ответственный администратор: {str(df.iloc[0]['admin_name'])}
     """
     if demo:
         return report

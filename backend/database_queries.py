@@ -58,6 +58,25 @@ def add_visit(
     """
     return query
 
+
+def add_room(
+        room_id,
+        room_name,
+        person_count,
+        price,
+        floor
+):
+    query = f"""
+    INSERT INTO slavyanka.rooms (room_id, room_name, person_count, price, floor)
+    VALUES (
+     {str(room_id)},
+    ' {str(room_name)}',
+    {"DEFAULT" if person_count is None else str(person_count)}, 
+     {str(price)},
+     {str(floor)})
+    """
+    return query
+
 def get_accomodation_query(
         room_id,
         date):
@@ -69,12 +88,21 @@ def get_accomodation_query(
        date_format(a.start_date, '%d.%m.%Y') start,
        date_format(leave_date, '%d.%m.%Y') end,
        a.room_id roomid,
-       r.room_name roomname
+       r.room_name roomname,
+       ad.name admin_name
 from accomodations a
          join clients c on c.id = a.client_id
          join rooms r on r.room_id = a.room_id
+         join administrators ad on ad.id = a.administrator_id
 where start_date <= '{report_day.year}-{report_day.month}-{report_day.day} 00:00:00'
   and leave_date >= '{report_day.year}-{report_day.month}-{report_day.day} 00:00:00'
   and a.room_id = {str(room_id)}
     """
+    print(query)
+    return query
+
+
+def get_administrator_query(name):
+    query = f"""INSERT INTO slavyanka.administrators (name) 
+    VALUES ('{str(name)}')"""
     return query

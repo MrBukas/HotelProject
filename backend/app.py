@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 
 from backend.response_generators import get_monthly_rooms_status, get_rooms_list, create_new_client, add_new_visit, \
-    get_accomodation_report
+    get_accomodation_report, add_new_admin
 
 app = Flask(__name__)
 
@@ -57,6 +57,11 @@ def addvisit():
         paid)
     return jsonify({"status": "Ok"})
 
+@app.route('/addadmin')
+def addadmin():
+    name = request.args.get('name')
+    add_new_admin(name)
+    return jsonify({"status": "Ok"})
 
 @app.route('/get_accomodation_info', methods=['GET'])
 def get_accomodation_info():
