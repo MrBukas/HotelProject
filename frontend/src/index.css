@@ -143,3 +143,8 @@ code {
     border: 1px solid #343434;
     background-color: #434343;
 }
+.elemOfRowActive{
+    width: 20px;
+    padding: 2px;
+    background-color: #434343;
+}

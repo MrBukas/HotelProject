@@ -1,9 +1,10 @@
 import mysql.connector as my_conn
 
+
 def get_db():
     user = "root"
     password = "1234"
-    host = "176.214.185.130"
+    host = "37.113.6.136"
     database = "slavyanka"
     conn = my_conn.connect(
         user=user,
