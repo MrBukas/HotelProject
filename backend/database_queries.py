@@ -13,7 +13,6 @@ join rooms r on r.room_id = a.room_id
 where start_date > '{y}-{m}-1' and leave_date < '{y}-{m}-31'
 order by a.room_id, start_date
     """
-    print(query)
     return query
 
 
@@ -53,8 +52,8 @@ def add_visit(
     VALUES (
     {str(client_id)}, 
     {str(room_id)},
-    '{start.year}-{start.month}-{start.day} 12:00:00',
-    '{end.year}-{end.month}-{end.day} 12:00:00',
+    '{start.year}-{start.month}-{start.day} 00:00:00',
+    '{end.year}-{end.month}-{end.day} 00:00:00',
     {"null" if paid is None else str(paid)})
     """
     return query

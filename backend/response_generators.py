@@ -4,6 +4,7 @@ from flask import jsonify
 from backend.database_queries import get_taken_rooms_query, get_all_rooms, add_client, add_visit, get_accomodation_query
 from backend.db_utils import get_db
 
+
 def get_rooms_list():
     query = get_all_rooms()
     df = pd.read_sql(query, get_db())
@@ -15,15 +16,17 @@ def get_rooms_list():
     }
     return jsonify(response)
 
+
 def get_fill_range(start, end):
     st = int(str(start)[0:2])
     en = int(str(end)[0:2])
     return range(st, en, 1)
 
-def get_monthly_rooms_status(year, month):
+
+def get_monthly_rooms_status(year, month, demo=False):
     query = get_taken_rooms_query(year, month)
     df = pd.read_sql(query, get_db())
-
+    print(df)
     rooms = []
     for room in df['room_name'].unique():
         rooms.append(room)
@@ -42,7 +45,10 @@ def get_monthly_rooms_status(year, month):
         for d in get_fill_range(start, end):
             roomdata[d] = 1
     rooms[current_room] = roomdata
+    if demo:
+        return rooms
     return jsonify({"rooms": rooms})
+
 
 def create_new_client(
         fio,
@@ -52,12 +58,11 @@ def create_new_client(
         comment
 ):
     query = add_client(fio,
-        document_id,
-        document_type,
-        phone_number,
-        comment)
+                       document_id,
+                       document_type,
+                       phone_number,
+                       comment)
 
-    print(query)
     con = get_db()
     cur = con.cursor()
     cur.execute(query)
@@ -79,7 +84,6 @@ def add_new_visit(
         end_date,
         paid
     )
-    print(query)
     con = get_db()
     cur = con.cursor()
     cur.execute(query)
@@ -89,13 +93,15 @@ def add_new_visit(
 
 def get_accomodation_report(
         room_id,
-        date):
+        date,
+        demo=False):
     query = get_accomodation_query(
         room_id,
         date)
-    print(query)
 
     df = pd.read_sql(query, get_db())
+    if len(df) == 0:
+        return jsonify({"result": "Нет информации"})
     report = f"""
     Комната: {str(df.iloc[0]['roomname'])}
     Клиент: {str(df.iloc[0]['client_fio'])}
@@ -103,4 +109,6 @@ def get_accomodation_report(
     Дата заселения: {str(df.iloc[0]['start'])}
     Дата выезда: {str(df.iloc[0]['end'])}
     """
+    if demo:
+        return report
     return jsonify({"result": report})
