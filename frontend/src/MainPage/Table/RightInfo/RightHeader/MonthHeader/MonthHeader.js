@@ -2,8 +2,8 @@ import React from "react";
 
 export const MonthHeader = (props) => {
     return(
-        <div>
-    
+        <div className={"month"}>
+            {props.month}
         </div>
     );
 };
