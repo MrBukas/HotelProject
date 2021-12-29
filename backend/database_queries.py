@@ -26,10 +26,10 @@ def add_client(fio,
         phone_number,
         comment):
     query = f"""
-    INSERT INTO slavyanka.clients (fio, document_type, document_id, phone_number, comment) 
+    INSERT INTO clients (fio, document_type, document_id, phone_number, comment) 
     VALUES (
     '{str(fio)}', 
-    {"DEFAULT" if document_type is None else "'" + str(document_type) + "'"}, 
+    {"'Паспорт'" if document_type is None else "'" + str(document_type) + "'"}, 
     {"null" if document_id is None else "'" + str(document_id) + "'"},
     {"null" if phone_number is None else "'" + str(phone_number) + "'"}, 
     {"null" if comment is None else "'" + str(comment) + "'"}
@@ -48,7 +48,7 @@ def add_visit(
     start = datetime.strptime(str(start_date), '%d.%m.%Y')
     end = datetime.strptime(str(end_date), '%d.%m.%Y')
     query = f"""
-    INSERT INTO slavyanka.accomodations (client_id, room_id, start_date, leave_date, total_paid) 
+    INSERT INTO accomodations (client_id, room_id, start_date, leave_date, total_paid) 
     VALUES (
     {str(client_id)}, 
     {str(room_id)},
@@ -67,11 +67,11 @@ def add_room(
         floor
 ):
     query = f"""
-    INSERT INTO slavyanka.rooms (room_id, room_name, person_count, price, floor)
+    INSERT INTO rooms (room_id, room_name, person_count, price, floor)
     VALUES (
      {str(room_id)},
     ' {str(room_name)}',
-    {"DEFAULT" if person_count is None else str(person_count)}, 
+    {"2" if person_count is None else str(person_count)}, 
      {str(price)},
      {str(floor)})
     """
@@ -85,8 +85,8 @@ def get_accomodation_query(
     select a.client_id,
        c.fio client_fio,
        c.phone_number number,
-       date_format(a.start_date, '%d.%m.%Y') start,
-       date_format(leave_date, '%d.%m.%Y') end,
+       a.start_date start,
+       leave_date end,
        a.room_id roomid,
        r.room_name roomname,
        ad.name admin_name
@@ -94,9 +94,7 @@ from accomodations a
          join clients c on c.id = a.client_id
          join rooms r on r.room_id = a.room_id
          join administrators ad on ad.id = a.administrator_id
-where start_date <= '{report_day.year}-{report_day.month}-{report_day.day} 00:00:00'
-  and leave_date >= '{report_day.year}-{report_day.month}-{report_day.day} 00:00:00'
-  and a.room_id = {str(room_id)}
+where a.id = 1
     """
     print(query)
     return query
