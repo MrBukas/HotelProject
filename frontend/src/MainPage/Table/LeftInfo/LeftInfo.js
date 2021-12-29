@@ -9,7 +9,7 @@ export const LeftInfo = (props) => {
                 <LeftHeader text={"Name Columns"}/>
             </div>
             <div className={"leftContainer"}>
-                <LeftContainer/>
+                <LeftContainer numbersInfo={props.numbersInfo}/>
             </div>
         </div>
     );
