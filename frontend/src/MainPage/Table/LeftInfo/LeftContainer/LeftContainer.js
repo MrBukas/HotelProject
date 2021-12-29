@@ -3,9 +3,9 @@ import React from "react";
 export const LeftContainer = (props) => {
     return(
         <div>
-            {props.numbersInfo.map((number, i)=>
+            {props.rooms.map((room, i)=>
                 <div key={i} className="numbersInfo">
-                    {number}
+                    {room}
                 </div>)
             }
         </div>

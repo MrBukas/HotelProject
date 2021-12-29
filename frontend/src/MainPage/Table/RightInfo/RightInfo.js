@@ -9,7 +9,7 @@ export const RightInfo = (props) => {
                 <RightHeader/>
             </div>
             <div className={"rightContainer"}>
-                <RightContainer  numbersInfo={props.numbersInfo}/>
+                <RightContainer table={props.table} numbersInfo={props.numbersInfo}/>
             </div>
         </div>
     );

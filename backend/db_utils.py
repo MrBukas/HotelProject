@@ -2,7 +2,7 @@ import mysql.connector as my_conn
 import sqlite3
 
 def get_db():
-    sqlite_connection = sqlite3.connect("C:\\Users\\Nikita\\PycharmProjects\\Hotel_db\\backend\\hotel.sqlite3")
+    sqlite_connection = sqlite3.connect("C:\\Users\\annam\\PycharmProjects\\HotelProject\\backend\\hotel.sqlite3")
     return sqlite_connection
     # user = "root"
     # password = "1234"

@@ -12,6 +12,86 @@ function getDataOfTable(url, setData) {
     }).then(response => response.json().then(res => setData(res)));
 }
 
+const temp = {
+  "rooms": {
+    "Room 101": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "Room 201": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+};
+
+const tempRooms = {
+  "rooms": [
+    "Room 101",
+    "Room 201",
+    "Room 102"
+  ]
+};
+
 export const Table = (props) => {
     const [dateForTable, setDateForTable] = useState({});
     const [rooms, setRooms] = useState({});
@@ -29,10 +109,10 @@ export const Table = (props) => {
     return (
         <div className={"tableContainer"}>
             <div className={"leftInfo"}>
-                <LeftInfo numbersInfo={numbersInfo}/>
+                <LeftInfo rooms={Object.keys(temp["rooms"])} numbersInfo={numbersInfo}/>
             </div>
             <div className={"rightInfo"}>
-                <RightInfo numbersInfo={numbersInfo}/>
+                <RightInfo table={temp["rooms"]} numbersInfo={numbersInfo}/>
             </div>
         </div>
     );

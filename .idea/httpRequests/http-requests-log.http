@@ -1,3 +1,55 @@
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-30T001204.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-30T000339.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-30T000253.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-30T000241.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-30T000228.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-30T000213.200.json
+
+###
+
+GET http://127.0.0.1:5000/getrooms
+
+<> 2021-12-29T234256.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-29T234139.200.json
+
+###
+
 GET http://127.0.0.1:5000/getrooms
 
 <> 2021-12-29T234020.200.json
@@ -267,58 +319,6 @@ GET http://127.0.0.1:5000/addclient?fio=BykanovNS1&phone_number=43212
 GET http://127.0.0.1:5000/addclient?fio=BykanovNS
 
 <> 2021-12-24T222946.200.json
-
-###
-
-GET http://127.0.0.1:5000/addclient?fio=BykanovNS
-
-<> 2021-12-24T222922.200.json
-
-###
-
-GET http://127.0.0.1:5000/addclient?fio=BykanovNS
-
-<> 2021-12-24T222847.500.html
-
-###
-
-GET http://127.0.0.1:5000/addclient?fio=BykanovNS
-
-<> 2021-12-24T222824.500.html
-
-###
-
-GET http://127.0.0.1:5000/addclient?fio=BykanovNS
-
-<> 2021-12-24T222754.200.json
-
-###
-
-GET http://127.0.0.1:5000/addclient?fio=BykanovNS
-
-<> 2021-12-24T222638.500.html
-
-###
-
-GET http://127.0.0.1:5000/addclient&fio=BykanovNS
-
-<> 2021-12-24T222617.404.html
-
-###
-
-GET http://127.0.0.1:5000/addclient&fio="BykanovNS"
-
-###
-
-GET http://127.0.0.1:5000/getstatus?year=2021&month=11
-
-<> 2021-12-24T215543.200.json
-
-###
-
-GET http://127.0.0.1:5000/getstatus?year=2021&month=11
-
-<> 2021-12-24T215340.200.json
 
 ###
 

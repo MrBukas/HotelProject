@@ -178,12 +178,12 @@ code {
 .elemOfRowActive {
     width: 20px;
     padding: 2px;
-    background-color: #434343;
+    background-color: #CD4E23;
 }
 
 .containerInputs {
     width: 400px;
-    height: 250px;
+    height: 550px;
     margin: 5% auto auto;
     background-color: #2D2D2D;
     box-shadow: 2px 2px 10px 2px #0C0C0C;
@@ -224,7 +224,7 @@ code {
     border: 3px solid #A6B7FF
 }
 
-.header {
+.headerInputs {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
