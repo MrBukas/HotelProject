@@ -178,6 +178,7 @@ code {
 .elemOfRowActive {
     width: 20px;
     padding: 2px;
+    border: 1px solid #CD4E23;
     background-color: #CD4E23;
 }
 

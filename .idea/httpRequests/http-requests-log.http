@@ -1,3 +1,18 @@
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&date=7.10.2021
+
+{
+  "result": "\n
+  Комната: Room 101\n
+     Клиент: Быканов Никита Сергеевич\n
+       Номер телефона: 1325645664\n
+         Дата заселения: 03.11.2021\n
+          Дата выезда: 12.11.2021\n    "
+}
+
+<> 2021-12-30T005339.200.json
+
+###
+
 GET http://127.0.0.1:5000/getstatus?year=2021&month=11
 
 <> 2021-12-30T001204.200.json
@@ -313,12 +328,6 @@ GET http://127.0.0.1:5000/addvisit?client_id=2&room_id=201&start_date=3.12.2021&
 GET http://127.0.0.1:5000/addclient?fio=BykanovNS1&phone_number=43212
 
 <> 2021-12-24T223015.200.json
-
-###
-
-GET http://127.0.0.1:5000/addclient?fio=BykanovNS
-
-<> 2021-12-24T222946.200.json
 
 ###
 

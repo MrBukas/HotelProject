@@ -32,7 +32,7 @@ export const AddVisit = (props) => {
         <div className={"backgroundInputs"}>
             <div className={"containerInputs"}>
                 <div className={"headerInputs"}>
-                    Добавить посетилиля
+                    Добавить заезд
                 </div>
                 {inputData.map((input,i) => <InputBox key={i} onChange={input.onChange} name={input.name} value={input.value} placeholder={input.placeholder} header={input.header}/>)}
 
