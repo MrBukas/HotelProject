@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS, cross_origin
 
 from backend.response_generators import get_monthly_rooms_status, get_rooms_list, create_new_client, add_new_visit, \
     get_accomodation_report, add_new_admin
@@ -6,7 +7,12 @@ from backend.response_generators import get_monthly_rooms_status, get_rooms_list
 app = Flask(__name__)
 
 
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
+
 @app.route('/getstatus', methods=['GET'])
+@cross_origin()
 def hello_world():  # put application's code here
     year = request.args.get('year')
     month = request.args.get('month')
@@ -15,11 +21,13 @@ def hello_world():  # put application's code here
 
 
 @app.route('/getrooms', methods=['GET'])
+@cross_origin()
 def getrooms():
     return get_rooms_list()
 
 
 @app.route('/addclient', methods=['POST'])
+@cross_origin()
 def addclient():
     fio = request.args.get('fio')
     document_id = request.args.get('document_id')
@@ -38,6 +46,7 @@ def addclient():
 
 
 @app.route('/addvisit', methods=['POST'])
+@cross_origin()
 def addvisit():
     client_id = request.args.get('client_id')
     room_id = request.args.get('room_id')
@@ -58,12 +67,14 @@ def addvisit():
     return jsonify({"status": "Ok"})
 
 @app.route('/addadmin', methods=['POST'])
+@cross_origin()
 def addadmin():
     name = request.args.get('name')
     add_new_admin(name)
     return jsonify({"status": "Ok"})
 
 @app.route('/get_accomodation_info', methods=['GET'])
+@cross_origin()
 def get_accomodation_info():
     room_id = request.args.get('room_id')
     date = request.args.get('date')
