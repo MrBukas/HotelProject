@@ -41,7 +41,7 @@ def get_monthly_rooms_status(year, month, demo=False):
         if line_room != current_room:
             rooms[current_room] = roomdata
             current_room = line_room
-            roomdata = [0] * 32
+            roomdata = [0] * 31
         start = df.iloc[i]['start']
         end = df.iloc[i]['leaved']
         for d in get_fill_range(start, end):

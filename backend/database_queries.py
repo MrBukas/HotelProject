@@ -10,7 +10,7 @@ def get_taken_rooms_query(year, month):
     start_date start,
     leave_date leaved from accomodations a
 join rooms r on r.room_id = a.room_id
-where id < 3
+--where id < 3
 order by a.room_id, start_date
     """
     return query
