@@ -26,6 +26,7 @@ def get_fill_range(start, end):
 
 def get_monthly_rooms_status(year, month, demo=False):
     query = get_taken_rooms_query(year, month)
+    print(query)
     df = pd.read_sql(query, get_db())
     print(df)
     rooms = []

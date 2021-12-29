@@ -7,10 +7,10 @@ def get_taken_rooms_query(year, month):
     select
     a.room_id room,
     r.room_name room_name,
-    date_format(start_date, '%d.%m.%Y') start,
-    date_format(leave_date, '%d.%m.%Y') leaved from accomodations a
+    start_date start,
+    leave_date leaved from accomodations a
 join rooms r on r.room_id = a.room_id
-where start_date > '{y}-{m}-1' and leave_date < '{y}-{m}-31'
+where id < 3
 order by a.room_id, start_date
     """
     return query

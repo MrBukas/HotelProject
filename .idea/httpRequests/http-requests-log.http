@@ -1,0 +1,324 @@
+GET http://127.0.0.1:5000/getrooms
+
+<> 2021-12-29T234020.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-29T234013.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-29T233609.500.html
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-29T233513.500.html
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&date=7.10.2021
+
+{
+  "result": "\n
+  Комната: Room 101\n
+     Клиент: Быканов Никита Сергеевич\n
+       Номер телефона: 1325645664\n
+         Дата заселения: 03.11.2021\n
+          Дата выезда: 12.11.2021\n    "
+}
+
+<> 2021-12-29T231425.500.html
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&date=7.10.2021
+
+{
+  "result": "\n
+  Комната: Room 101\n
+     Клиент: Быканов Никита Сергеевич\n
+       Номер телефона: 1325645664\n
+         Дата заселения: 03.11.2021\n
+          Дата выезда: 12.11.2021\n    "
+}
+
+<> 2021-12-29T231415.500.html
+
+###
+
+GET http://127.0.0.1:5000/addvisit?client_id=2&room_id=201&start_date=3.12.2021&end_date=6.12.2021&paid=5000
+
+<> 2021-12-29T231408.500.html
+
+###
+
+GET http://127.0.0.1:5000/addclient?fio=BykanovNS1&phone_number=43212
+
+<> 2021-12-29T231359.500.html
+
+###
+
+GET http://127.0.0.1:5000/getrooms
+
+<> 2021-12-29T231357.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-29T231345.500.html
+
+###
+
+GET http://127.0.0.1:5000/getrooms
+
+<> 2021-12-29T230814.200.json
+
+###
+
+GET http://127.0.0.1:5000/getrooms
+
+<> 2021-12-29T230731.500.html
+
+###
+
+GET http://127.0.0.1:5000/getrooms
+
+<> 2021-12-29T230650.500.html
+
+###
+
+GET http://127.0.0.1:5000/getrooms
+
+<> 2021-12-29T224154.500.html
+
+###
+
+GET http://127.0.0.1:5000/getrooms
+
+<> 2021-12-29T224103.500.html
+
+###
+
+GET http://127.0.0.1:5000/getrooms
+
+<> 2021-12-25T114815.200.json
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&date=7.10.2021
+
+{
+  "result": "\n
+  Комната: Room 101\n
+     Клиент: Быканов Никита Сергеевич\n
+       Номер телефона: 1325645664\n
+         Дата заселения: 03.11.2021\n
+          Дата выезда: 12.11.2021\n    "
+}
+
+###
+
+GET http://127.0.0.1:5000/addvisit?client_id=2&room_id=201&start_date=3.12.2021&end_date=6.12.2021&paid=5000
+
+###
+
+GET http://127.0.0.1:5000/addclient?fio=BykanovNS1&phone_number=43212
+
+###
+
+GET http://127.0.0.1:5000/getrooms
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&date=7.10.2021
+
+{
+  "result": "\n
+  Комната: Room 101\n
+     Клиент: Быканов Никита Сергеевич\n
+       Номер телефона: 1325645664\n
+         Дата заселения: 03.11.2021\n
+          Дата выезда: 12.11.2021\n    "
+}
+
+<> 2021-12-25T022448.500.html
+
+###
+
+GET http://127.0.0.1:5000/addvisit?client_id=2&room_id=201&start_date=3.12.2021&end_date=6.10.2021&paid=5000
+
+<> 2021-12-25T022247.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-25T020319.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-25T020236.200.json
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&date=7.11.2021
+
+<> 2021-12-25T000849.200.json
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&date=3.11.2021
+
+<> 2021-12-25T000841.200.json
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&date=3.11.2021
+
+<> 2021-12-25T000754.200.json
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&start_date=3.11.2021&end_date=3.11.2021
+
+<> 2021-12-25T000623.200.json
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&start_date=3.11.2021&end_date=3.11.2021
+
+<> 2021-12-25T000312.500.html
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&start_date=3.11.2021&end_date=12.11.2021
+
+<> 2021-12-25T000202.200.json
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&start_date=3.12.2021&end_date=6.12.2021
+
+<> 2021-12-25T000132.500.html
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=101&start_date=3.12.2021&end_date=6.12.2021
+
+<> 2021-12-24T235517.500.html
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=201&start_date=3.12.2021&end_date=6.12.2021
+
+<> 2021-12-24T235504.500.html
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=201&start_date=3.12.2021&end_date=6.12.2021
+
+<> 2021-12-24T235436.500.html
+
+###
+
+GET http://127.0.0.1:5000/get_accomodation_info?room_id=201&start_date=3.12.2021&end_date=6.12.2021
+
+<> 2021-12-24T235347.500.html
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-24T232703.200.json
+
+###
+
+GET http://127.0.0.1:5000/addvisit?client_id=2&room_id=201&start_date=3.12.2021&end_date=6.12.2021&paid=5000
+
+<> 2021-12-24T232646.200.json
+
+###
+
+GET http://127.0.0.1:5000/addvisit?client_id=2&room_id=201&start_date=3.12.2021&end_date=6.12.2021&paid=5000
+
+<> 2021-12-24T232633.200.json
+
+###
+
+GET http://127.0.0.1:5000/addclient?fio=BykanovNS1&phone_number=43212
+
+<> 2021-12-24T223015.200.json
+
+###
+
+GET http://127.0.0.1:5000/addclient?fio=BykanovNS
+
+<> 2021-12-24T222946.200.json
+
+###
+
+GET http://127.0.0.1:5000/addclient?fio=BykanovNS
+
+<> 2021-12-24T222922.200.json
+
+###
+
+GET http://127.0.0.1:5000/addclient?fio=BykanovNS
+
+<> 2021-12-24T222847.500.html
+
+###
+
+GET http://127.0.0.1:5000/addclient?fio=BykanovNS
+
+<> 2021-12-24T222824.500.html
+
+###
+
+GET http://127.0.0.1:5000/addclient?fio=BykanovNS
+
+<> 2021-12-24T222754.200.json
+
+###
+
+GET http://127.0.0.1:5000/addclient?fio=BykanovNS
+
+<> 2021-12-24T222638.500.html
+
+###
+
+GET http://127.0.0.1:5000/addclient&fio=BykanovNS
+
+<> 2021-12-24T222617.404.html
+
+###
+
+GET http://127.0.0.1:5000/addclient&fio="BykanovNS"
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-24T215543.200.json
+
+###
+
+GET http://127.0.0.1:5000/getstatus?year=2021&month=11
+
+<> 2021-12-24T215340.200.json
+
+###
+
