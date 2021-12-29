@@ -1,7 +1,6 @@
 import React from "react";
 import {Table} from "./Table/Table";
 import {TitleOfPage} from "./TitleOfPage/TitleOfPage";
-import {Menu} from "./Menu/Menu";
 
 export const MainPage = (props) => {
     return (

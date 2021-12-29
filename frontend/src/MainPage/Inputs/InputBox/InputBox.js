@@ -7,7 +7,7 @@ export const InputBox = (props)=>{
             <div className={"description"}>
                 {props.header}
             </div>
-            <Input placeholder={props.placeholder} classes={"input"}/>
+            <Input onChange={props.onChange} name={props.name} value={props.value} placeholder={props.placeholder} classes={"input"}/>
         </div>
     );
 }
