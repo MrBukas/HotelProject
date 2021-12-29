@@ -19,7 +19,7 @@ def getrooms():
     return get_rooms_list()
 
 
-@app.route('/addclient')
+@app.route('/addclient', methods=['POST'])
 def addclient():
     fio = request.args.get('fio')
     document_id = request.args.get('document_id')
@@ -37,7 +37,7 @@ def addclient():
     return jsonify({"status": "Ok"})
 
 
-@app.route('/addvisit')
+@app.route('/addvisit', methods=['POST'])
 def addvisit():
     client_id = request.args.get('client_id')
     room_id = request.args.get('room_id')
@@ -57,7 +57,7 @@ def addvisit():
         paid)
     return jsonify({"status": "Ok"})
 
-@app.route('/addadmin')
+@app.route('/addadmin', methods=['POST'])
 def addadmin():
     name = request.args.get('name')
     add_new_admin(name)
